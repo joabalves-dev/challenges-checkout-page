@@ -23,79 +23,185 @@
   <main>
     <div class="container">
       <div class="grid grid-col-2">
-        <form action="#" method="post">
-          <div class="form-header">
-            <h1>Contact infomation</h1>
+        <div class="form">
+          <form action="#" method="post">
+            <div class="form-header">
+              <h1>Contact infomation</h1>
+            </div>
+            <div class="form-group w-100">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" placeholder="Enter your email...">
+              <span class="material-icons material-icons-outlined">
+                email
+              </span>
+            </div>
+            <div class="form-group w-100">
+              <label for="phone">Phone</label>
+              <input type="tel" name="phone" id="phone" placeholder="Enter your phone...">
+              <span class="material-icons material-icons-outlined">
+                call
+              </span>
+            </div>
+            <div class="form-header">
+              <h1>Shipping address</h1>
+            </div>
+            <div class="form-group w-100">
+              <label for="name">Full name</label>
+              <input type="text" name="name" id="name" placeholder="Enter your full name..." value="Rodney Cotton">
+              <span class="material-icons account_circle">
+                account_circle
+              </span>
+            </div>
+            <div class="form-group w-100">
+              <label for="name">Address</label>
+              <input type="text" name="address" id="address" placeholder="Your address..">
+              <span class="material-icons home">
+                home
+              </span>
+            </div>
+            <div class="form-group w-100">
+              <label for="name">City</label>
+              <input type="text" name="city" id="city" placeholder="Your city..">
+              <span class="material-icons location_city">
+                location_city
+              </span>
+            </div>
+            <div class="flex">
+              <div class="form-group">
+                <label for="country">Country</label>
+                <div class="input-select">
+                  <input type="text" name="country" id="country">
+                  <span class="material-icons public">
+                    public
+                  </span>
+                  <a href="" onclick="selectToggle(event)">
+                    <span class="material-icons expand_more">
+                      expand_more
+                    </span>
+                  </a>
+                  <ul class="select-list">
+                    <li class="select-list-item">Brazil</li>
+                    <li class="select-list-item">Japan</li>
+                    <li class="select-list-item">Canadá</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="postal">Postal Code</label>
+                <input type="number" name="postal" id="postal" placeholder="Your Postal code...">
+                <span class="material-icons markunread_mailbox">
+                  markunread_mailbox
+                </span>
+              </div>
+            </div>
+            <!-- <div class="form-group w-50">
+              <label for="name">Country</label>
+              <select name="country" id="country">
+                <option value="Your country.." selected>Your country..</option>
+                <option value="brazil">Brazil</option>
+                <option value="japan">Japan</option>
+                <option value="canada">Canadá</option>
+              </select>
+              <span class="material-icons public">
+                public
+              </span>
+            </div>
+            <div class="form-group w-50">
+              <label for="postal">Postal Code</label>
+              <input type="number" name="postal" id="postal" placeholder="Your Postal code...">
+              <span class="material-icons markunread_mailbox">
+                markunread_mailbox
+              </span>
+            </div> -->
+            <div class="form-group w-100">
+              <label for="save"><input type="checkbox" name="save" id="save"> Save this information for next
+                time</label>
+            </div>
+            <div class="form-group w-100">
+              <input type="submit" value="Continue" class="btn">
+            </div>
+            <div class="clear-float"></div>
+          </form>
+        </div>
+        <aside>
+          <ul class="list ">
+            <li class="list-item">
+              <div class="box-img">
+                <img src="assets/img/photo1.png" alt="photo-1">
+              </div>
+              <div class="name">Vintage Backbag</div>
+              <div class="price"><span>$54.99</span> <span>$94.99</span></div>
+              <div class="number">
+                <input type="number" min="0" name="qtd" value="1">
+                <div class="btn-aside">
+                  <a href="#" onclick='menos(this)'><span class="material-icons remove">remove</span></a>
+                  <a href="#" onclick="mais(this)"><span class="material-icons add">add</span></a>
+                </div>
+              </div>
+            </li>
+            <li class="list-item">
+              <div class="box-img">
+                <img src="assets/img/photo2.png" alt="photo-2">
+              </div>
+              <div class="name">Levi Shoes</div>
+              <div class="price"><span>$74.99</span><span>$124.99</span></div>
+              <div class="number">
+                <input type="number" min="0" name="qtd" value="1">
+                <div class="btn-aside">
+                  <a href="#" onclick='menos(this)'><span class="material-icons remove">remove</span></a>
+                  <a href="#" onclick="mais(this)"><span class="material-icons add">add</span></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <hr>
+          <div class="shipping">
+            <h1>Shipping</h1>
+            <h2>$19</h2>
           </div>
-          <div class="form-group w-100">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Enter your email...">
-            <span class="material-icons material-icons-outlined">
-              email
-            </span>
+          <hr>
+          <div class="total">
+            <h1>Total</h1>
+            <h2>$148.98</h2>
           </div>
-          <div class="form-group w-100">
-            <label for="phone">Phone</label>
-            <input type="tel" name="phone" id="phone" placeholder="Enter your phone...">
-            <span class="material-icons material-icons-outlined">
-              call
-            </span>
-          </div>
-
-          <div class="form-header">
-            <h1>Shipping address</h1>
-          </div>
-          <div class="form-group w-100">
-            <label for="name">Full name</label>
-            <input type="text" name="name" id="name" placeholder="Enter your full name..." value="Rodney Cotton">
-            <span class="material-icons account_circle">
-              account_circle
-            </span>
-          </div>
-          <div class="form-group w-100">
-            <label for="name">Address</label>
-            <input type="text" name="address" id="address" placeholder="Your address..">
-            <span class="material-icons home">
-              home
-            </span>
-          </div>
-          <div class="form-group w-100">
-            <label for="name">City</label>
-            <input type="text" name="city" id="city" placeholder="Your city..">
-            <span class="material-icons location_city">
-              location_city
-            </span>
-          </div>
-          <div class="form-group w-50">
-            <label for="name">Country</label>
-            <select name="country" id="country">
-              <option value="Your country.." selected>Your country..</option>
-              <option value="brazil">Brazil</option>
-              <option value="japan">Japan</option>
-              <option value="canada">Canadá</option>
-            </select>
-            <span class="material-icons public">
-              public
-            </span>
-          </div>
-          <div class="form-group w-50">
-            <label for="postal">Postal Code</label>
-            <input type="number" name="postal" id="postal" placeholder="Your Postal code...">
-            <span class="material-icons markunread_mailbox">
-              markunread_mailbox
-            </span>
-          </div>
-          <div class="form-group w-100">
-            <label for="save"><input type="checkbox" name="save" id="save"> Save this information for next time</label>
-          </div>
-          <div class="form-group w-100">
-            <input type="submit" value="Continue" class="btn">
-          </div>
-          <div class="clear-float"></div>
-        </form>
+        </aside>
       </div>
     </div>
   </main>
+  <footer>
+    <div class="container">
+      <p>created by joabalves-dev - devChallenges.io</p>
+    </div>
+  </footer>
+  <script>
+    /* Funções responsáveis pelo numero adicionar a quantidade itens */
+    function mais(element){
+      let input = element.parentElement.parentElement.children[0];
+      let value =  parseInt(input.value);
+      input.value = value + 1;
+    }
+    function menos(element){
+      let input = element.parentElement.parentElement.children[0];
+      let value =  parseInt(input.value);
+      value > 0?input.value = value - 1:0 ;
+    }
+
+    function selectToggle(){
+      event.preventDefault();
+      let selectList = event.target.parentElement.parentElement.children[3];
+      selectList.classList.toggle('ative');
+    }
+
+    function selectItem(selectElement=''){
+      const item = document.querySelectorAll('.input-select .select-list .select-list-item');
+      const select = document.getElementById(selectElement);
+      item.forEach(i => i.addEventListener('click',()=>{
+        select.value = i.innerText;
+        selectToggle();
+      }))
+    }
+    selectItem('country');
+  </script>
 </body>
 
 </html>
